@@ -5,37 +5,37 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unpaz.web.model.Heladera;
-import com.unpaz.web.repository.HeladeraRepository;
-import com.unpaz.web.service.HeladeraService;
+import com.unpaz.web.model.Electrodomestico;
+import com.unpaz.web.repository.ElectrodomesticoRepository;
+import com.unpaz.web.service.ElectrodomesticoService;
 
 
 @Service
-public class HeladeraServiceImp implements HeladeraService{
+public class ElectrodomesticoServiceImp implements ElectrodomesticoService{
 @Autowired
-private HeladeraRepository HelaRepo;
+private ElectrodomesticoRepository electrodomesticoRepository;
 	@Override
-	public List<Heladera> getAll() {
+	public List<Electrodomestico> getAll() {
 		
-		return (List<Heladera>) HelaRepo.findAll();
+		return (List<Electrodomestico>) electrodomesticoRepository.findAll();
 	}
 	@Override
-	public Heladera createHeladera(Heladera heladera) {
+	public Electrodomestico createHeladera(Electrodomestico electrodomestico) {
 		// TODO Auto-generated method stub
-		return HelaRepo.save(heladera);
+		return electrodomesticoRepository.save(electrodomestico);
 	}
 	
 	@Override
-	public Heladera deleteById(Long id) {
-		HelaRepo.deleteById(id);
-		return HelaRepo.findById(id).get();
+	public Electrodomestico deleteById(Long id) {
+		electrodomesticoRepository.deleteById(id);
+		return electrodomesticoRepository.findById(id).get();
 	}
 	
 	@Override
-	public Heladera updateById(Heladera heladera) {
-		Heladera helaNew = HelaRepo.findById(heladera.getId()).get();
-		helaNew.setDescripcion(heladera.getDescripcion());
+	public Electrodomestico updateById(Electrodomestico electrodomestico) {
+		Electrodomestico helaNew = electrodomesticoRepository.findById(electrodomestico.getId()).get();
+		helaNew.setPrecio(electrodomestico.getPrecio());
 		
-		return HelaRepo.save(helaNew);
+		return electrodomesticoRepository.save(helaNew);
 	}
 }

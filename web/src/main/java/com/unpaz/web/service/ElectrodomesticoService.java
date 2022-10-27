@@ -2,12 +2,12 @@ package com.unpaz.web.service;
 
 import java.util.List;
 
-import com.unpaz.web.model.Heladera;
+import com.unpaz.web.model.Electrodomestico;
 
-public interface HeladeraService {
-	public List<Heladera> getAll ();
-	public Heladera createHeladera(Heladera heladera);
-	public Heladera deleteById(Long id);
-	public Heladera updateById(Heladera heladera);
+public interface ElectrodomesticoService {
+	public List<Electrodomestico> getAll ();
+	public Electrodomestico createHeladera(Electrodomestico electrodomestico);
+	public Electrodomestico deleteById(Long id);
+	public Electrodomestico updateById(Electrodomestico electrodomestico);
 	
 }

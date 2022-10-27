@@ -2,8 +2,8 @@ package com.unpaz.web.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.unpaz.web.model.Heladera;
+import com.unpaz.web.model.Electrodomestico;
 
-public interface HeladeraRepository extends CrudRepository<Heladera, Long> {
+public interface ElectrodomesticoRepository extends CrudRepository<Electrodomestico, Long> {
 	
 }

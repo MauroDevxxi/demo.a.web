@@ -9,24 +9,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unpaz.web.model.Heladera;
-import com.unpaz.web.service.HeladeraService;
+import com.unpaz.web.model.Electrodomestico;
+import com.unpaz.web.service.ElectrodomesticoService;
 
 @RestController
-@RequestMapping("v1/heladera")
-public class HeladraController {
+@RequestMapping("v1/Electrodomestico")
+public class ElectrodomesticoController {
 	
 	@Autowired
-	private HeladeraService heladeraService;
+	private ElectrodomesticoService electrodomesticoService;
 
 	
 	@GetMapping("/read")
-	public List<Heladera> lee () {
-		return heladeraService.getAll();
+	public List<Electrodomestico> getAllElectrodomesticos() {
+		return electrodomesticoService.getAll();
 	}
 	
 	@PostMapping("/crear")
-	public Heladera crearHeladera(@RequestBody Heladera heladera) {
-		return heladeraService.createHeladera(heladera);
+	public Electrodomestico crearHeladera(@RequestBody Electrodomestico electrodomestico) {
+		return electrodomesticoService.createHeladera(electrodomestico);
 	}
 }

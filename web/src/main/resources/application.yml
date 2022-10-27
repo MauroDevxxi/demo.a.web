@@ -2,11 +2,11 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: 1234
-    url: jdbc:mysql://localhost:3306/mysql
+    url: jdbc:mysql://localhost:3306/meet
     username: root
   jpa:
     generate-ddl: true
     hibernate:
       ddl:
-        auto: none
+        auto: update
     show-sql: true
